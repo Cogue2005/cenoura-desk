@@ -2,9 +2,14 @@ import Link from "next/link";
 import "./globals.css";
 import styles from './MeuLink.module.css';
 
+import ChatIcon from '../public/icons/chat'
+
 export default function Home() {
   return (
     <div className={styles.container}>
+      <button className={styles.iconFixed}>
+        <ChatIcon />
+      </button>
       <main>
         <section className={styles.Section1}>
           <div className={styles.headerWrapper}>
@@ -13,9 +18,9 @@ export default function Home() {
             </div>
 
             <nav className={styles.navLinks} aria-label="principal">
-              <Link href="#" className={styles.linkCustomizado}>Quero logar</Link>
+              <Link href="/login" className={styles.linkCustomizado}>Quero logar</Link>
               <span className={styles.separator}>|</span>
-              <Link href="#" className={styles.linkCustomizado}>Criar conta</Link>
+              <Link href="/cadastro" className={styles.linkCustomizado}>Criar conta</Link>
             </nav>
           </div>
 
@@ -33,7 +38,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="sobre"></section>
+        <section id="sobre">
+        </section>
       </main>
     </div >
   );

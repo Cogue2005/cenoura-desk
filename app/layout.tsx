@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CenouraDesk - Gerenciamento de agendamentos",
   description: "O controle total da sua agenda e dos seus profissionais",
+  icons: {
+    icon: '/icon2.png',
+  },
 };
 
 export default function RootLayout({
