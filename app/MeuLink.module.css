@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Section1 {
+    width: 100%;
+    border-bottom: 2px solid var(--accent, #ff9b21);
+    padding: 2rem 0;
+}
+
+.headerWrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--accent, #ff9b21);
+    border-radius: 50px;
+}
+
+.brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent, #ff9b21);
+    margin: 0;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.linkCustomizado {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: inherit;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.linkCustomizado:hover {
+    background-color: rgba(255, 155, 33, 0.12);
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+.separator {
+    color: #ffffff66;
+    margin: 0 0.25rem;
+}
+
+.hero {
+    max-width: 1100px;
+    width: 100%;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.heroText {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.subText {
+    margin: 0;
+    color: #dcdcdc;
+}
+
+.cta {
+    margin-top: 1rem;
+}
+
+.ctaBtn {
+    border: 2px solid var(--accent, #ff9b21);
+    padding: 10px 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    background: transparent;
+    color: inherit;
+    transition: all 0.25s;
+}
+
+.ctaBtn:hover {
+    background-color: var(--accent, #ff9b21);
+    border-color: transparent;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .headerWrapper {
+        padding: 0.5rem;
+        border-radius: 24px;
+    }
+
+    .brand h1 {
+        font-size: 1.1rem;
+    }
+
+    .heroText {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .navLinks {
+        font-size: 0.85rem;
+    }
+}
