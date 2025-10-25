@@ -1,0 +1,58 @@
+/* O Overlay: Tela inteira com fundo escuro semi-transparente */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+/* O Modal: Caixa que contém o conteúdo */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centraliza o modal */
+
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    /* Fica acima do overlay */
+
+    min-width: 350px;
+    max-width: 90%;
+    max-height: 80vh;
+    /* Limita a altura para modais maiores */
+    overflow-y: auto;
+    /* Adiciona scroll se o conteúdo for grande */
+}
+
+/* Botão de Fechar */
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+    padding: 0;
+}
+
+.closeButton:hover {
+    color: #d32f2f;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Estilos internos para o conteúdo (opcional) */
+.content {
+    padding-top: 10px;
+}
