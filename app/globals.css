@@ -1,4 +1,3 @@
-/* Variáveis e reset básico */
 :root {
   --bg: #0F0F0F;
   --text: #ffffff;
@@ -6,7 +5,6 @@
   --accent: #ff9b21;
 }
 
-/* reset mínimo */
 *,
 *::before,
 *::after {
@@ -30,7 +28,10 @@ body {
 }
 
 main {
+  flex: 1 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 main section {

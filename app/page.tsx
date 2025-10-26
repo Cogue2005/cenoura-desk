@@ -6,6 +6,12 @@ import { MeuModal } from './components/ModalSimples'; // Importa o componente mo
 import styles from './MeuLink.module.css';
 
 import ChatIcon from '../public/icons/chat';
+import YtbIcon from '../public/icons/youtube';
+import InstagramIcon from '../public/icons/instagram';
+import GitIcon from '../public/icons/github';
+
+import GridContainer from './displayGrid';
+
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,12 +19,20 @@ export default function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  // Função para rolar suavemente até uma section pelo id
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.container}>
 
       <button
         className={styles.iconFixed}
-        onClick={openModal} 
+        onClick={openModal}
         aria-label="Abrir Chat"
       >
         <ChatIcon />
@@ -47,20 +61,47 @@ export default function Home() {
             </p>
 
             <div className={styles.cta}>
-              <button className={styles.ctaBtn}>Conhecer projeto</button>
+              <button
+                className={styles.ctaBtn}
+                onClick={() => scrollToSection('sobre')}
+              >
+                Conhecer projeto
+              </button>
             </div>
           </div>
         </section>
 
         <section id="sobre">
+          <GridContainer />
+        </section>
+
+        <section>
         </section>
       </main>
+      <footer className={styles.footer}>
+        <div>
+          <a href="#">
+            <YtbIcon />
+          </a>
+          <a href="#">
+            <InstagramIcon />
+          </a>
+          <a href="#">
+            <GitIcon />
+          </a>
+        </div>
+        <div>
+          <p>
+            &copy; {new Date().getFullYear()} <strong>CenouraDesk</strong>. Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+
 
       <MeuModal
-        isOpen={isModalOpen} // Passa o estado atual
-        onClose={closeModal} // Passa a função para fechar
+        isOpen={isModalOpen}
+        onClose={closeModal}
       >
-        {/* Conteúdo do Modal (O que o usuário verá ao clicar no ChatIcon) */}
         <div>
           <h3>Atendimento CenouraDesk</h3>
           <p>Olá! Em que podemos ajudar hoje? Deixe sua mensagem ou dúvida abaixo.</p>
