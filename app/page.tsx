@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { MeuModal } from './components/ModalSimples'; // Importa o componente modal
-import styles from './MeuLink.module.css';
+import styles from './styles.module.css';
 
 import ChatIcon from '../public/icons/chat';
 import YtbIcon from '../public/icons/youtube';
