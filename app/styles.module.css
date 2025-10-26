@@ -245,5 +245,6 @@
 
 .footer svg:hover {
     opacity: 0.7;
-    fill: #ff9b21;
+    fill: oklab(77.61200000000001% 0.07453 0.15042);
 }
+
